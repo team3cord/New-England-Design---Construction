@@ -188,9 +188,7 @@ nav li a {
 }
 /* footer */
 .footer {
-    position: relative;
     float: left;
-    z-index: 2;
     width: 100%;
     height: 28px;
     border-top: 1px solid #81888b;
@@ -219,19 +217,14 @@ nav li a {
 }
 .home-slide {
     z-index: 1;
-    position: absolute;
-    top: 0;
-    width:100%;
 }
 .home-sidebar {
-    position: relative;
     z-index: 2;
-    float: left;
     width: 25%;
     height: 100%;
-   /* position: absolute;
+    position: absolute;
     top: 0;
-    left: 0;*/
+    left: 0;
     background: #ffffff;
     opacity: 0.7;
 }
@@ -264,19 +257,18 @@ nav li a {
 }
 .home-drop {
     z-index: 2;
-    position: relative;
-    float: right;
     width: 75%;
-    height: inherit;
-   /* position: absolute;
+    position: absolute;
     top: 0;
-    right: 0;*/
-    padding: 38px 3%;
-    background: rgba(142, 174, 198, 0.4);
+    right: 0;
+
 }
 .drop-tab {
+    position: relative;
     float: left;
     width: 100%;
+    padding: 38px 3%;
+    background: rgba(142, 174, 198, 0.4);
 
 }
 .drop-tab h1 {
@@ -301,26 +293,22 @@ nav li a {
     position: relative;
     display: none;
     float: left;
-    padding-top: 40px;
+    padding: 38px 3%;
+    background: rgba(142, 174, 198, 0.4);
 }
 .home-drop p {
     color: #ffffff;
 }
-.drop-nav-btn {
-    position: relative;
+.drop-action-div{
     float: right;
-    width:75%;
+    width: 100%;
     height: 23px;
-    background: #00ff00;
+    background: #ff00ff;
 }
 .drop-action {
-    z-index: 2;
     display: block;
     margin: 0 auto;
-    /*position: absolute;
-    top: 126px;
-    right: 47.5%;*/
-    width: 50px;
+    width: 5%;
     height: 23px;
     background: url("img/drop-holder.png")no-repeat;
 }
