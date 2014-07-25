@@ -1,9 +1,9 @@
 <?php  /* Template Name: HOME */ get_header(); ?>
 <main class="home-main">
-    <!-- <div class="home-slide">
+     <div class="home-slide">
         <?//php echo get_field('home_slider'); ?>
         <img style="width: 100%;" src="<?php echo get_template_directory_uri(); ?>/img/kitchen-1.png">
-    </div> -->
+    </div>
     <div class="home-drop">
         <div class="drop-tab">
             <h1><?php echo get_field('drop_down_header'); ?></h1>
@@ -12,7 +12,9 @@
         <div class="drop-content">
             <?php echo get_field('drop_down_content'); ?>
         </div>
-        <a class="drop-action" href="#"></a>
+        <div class="drop-action-div">
+            <a class="drop-action" href="#"></a>
+        </div>
     </div>
     <aside class="home-sidebar">
         <div class="home-testimonial">
