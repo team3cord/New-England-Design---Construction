@@ -10,7 +10,6 @@
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<?php wp_head(); ?>
 		<script>
@@ -47,10 +46,10 @@
 					</nav>
                     <div class="head-social">
                         <ul>
-                            <li class="">fb</li>
-                            <li class="">li</li>
-                            <li class="">tw</li>
-                            <li class="">ho</li>
+                            <li class="mc-fb"><a href="http://www.facebook.com/pages/New-England-Design-Construction/109240885763636"></a></li>
+                            <li class="mc-in"><a href="https://www.linkedin.com/company/new-england-design-&-construction"></a></li>
+                            <li class="mc-twt"><a href="https://twitter.com/NEDesignConst"></a></li>
+                            <li class="mc-hou"><a href="http://www.houzz.com/pro/nedc/new-england-design-construction"></a></li>
                         </ul>
                     </div>
 					<!-- /nav -->

@@ -79,8 +79,6 @@ ul {
 
 /* wrapper */
 .wrapper {
-	max-width:1280px;
-	width:95%;
 	margin:0 auto;
 	position:relative;
 }
@@ -88,7 +86,6 @@ ul {
 .header {
     border-bottom: 1px solid #636c6f;
     width: 100%;
-    max-width: 1280px;
 }
 
 /* logo */
@@ -105,42 +102,84 @@ ul {
 nav  ul {
     margin: 0;
     padding: 0;
-    width: 48%;
+    width: 55%;
     float: left;
-    max-width: 670px;
     height: 85px;
-    background: #ff00ff;
 }
 nav li {
     display: inline-block;
     float: left;
+    position: relative;
     width: 20%;
-    height: 50%;
+    height: 60%;
+    margin-top: 30px;
     text-transform: uppercase;
+}
+nav li a {
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    background: #00ff00;
+    padding: 5px 0 5px 0;
+}
+nav li a:hover {
+    border-bottom: 4px solid #555f62;
 }
 .main-logo {
     float: left;
-    width: 22%;
+    width: 14%;
     height: 85px;
+
+}
+.main-logo img {
+    margin-left: 20%;
 }
 nav li a {
     font-size: 13px;
 }
 /* social */
 .head-social {
-    float: left;
-    width: 30%;
+    float: right;
+    width: 25%;
     height: 85px;
-    background: #00ff00;
 
 }
 .head-social ul {
+    float: right;
+    margin: 31px 12.5% 0 0;
 
 }
 .head-social li {
     display: inline-block;
+    margin: 0 6px 0 6px;
+}
+.head-social a {
+    display: block;
+    width: 24px;
+    height: 23px;
+}
+.mc-fb a {
+    background: url("img/fb.png") no-repeat;
+}
+.mc-fb a:hover {
+    background: url("img/fb-hov.png") no-repeat;
+}
+.mc-in a {
+    background: url("img/in.png") no-repeat;
+}
+.mc-in a:hover {
+    background: url("img/in-hov.png") no-repeat;
+}
+.mc-twt a {
+    background: url("img/twt.png") no-repeat;
+}
+.mc-twt a:hover {
+    background: url("img/twt-hov.png") no-repeat;
+}
+.mc-hou a {
+    background: url("img/houzz.png") no-repeat;
+}
+.mc-hou a:hover {
+    background: url("img/houzz-hov.png") no-repeat;
 }
 
 /* sidebar */
@@ -149,12 +188,121 @@ nav li a {
 }
 /* footer */
 .footer {
-
+    float: left;
+    width: 100%;
+    height: 28px;
+    border-top: 1px solid #81888b;
+    background: #555f62;
+}
+.copyright {
+    float: left;
+    font-size: 10px;
+    margin: 9px 0 0 2.5%;
+    color: #ffffff;
+}
+.hic {
+    float: right;
+    color: #ffffff;
+    font-size: 11px;
+    margin: 8px 2.5% 0 0;
 }
 
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
+.home-main {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.home-slide {
+    z-index: 1;
+}
+.home-sidebar {
+    z-index: 2;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    opacity: 0.7;
+}
+.home-testimonial {
+    border-bottom: 1px solid #f1f1f3;
+    padding: 75px 9.4% 45px 10.5%;
+}
+.left-call-today {
+    border-top: 1px solid #e5e5e6;
+    border-bottom: 1px solid #f1f1f3;
+    padding: 75px 9.4% 45px 10.5%;
+}
+.left-call-today a {
+    font-size: 18px;
+    color: #f18c46;
+}
+.double-border{
+    border-top: 1px solid #e5e5e6;
+}
+.home-drop {
+    z-index: 2;
+    width: 75%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 38px 3%;
+    background: rgba(142, 174, 198, 0.4);
+}
+.drop-tab {
+    float: left;
+    width: 100%;
+
+}
+.drop-tab h1 {
+    float: left;
+    margin:0;
+    padding: 0;
+    color: #ffffff;
+}
+.btn-home-drop {
+    float: right;
+    font-size: 18px;
+    color: #ffffff;
+    background: #f18c46;
+    border: 1px solid #ffffff;
+    padding: 9px 2%;
+}
+.btn-home-drop:hover {
+    background: #ee721d;
+    color: #ffffff;
+}
+.drop-content {
+    display: none;
+    float: left;
+    padding-top: 40px;
+}
+.home-drop p {
+    color: #ffffff;
+}
+.drop-action {
+    position: absolute;
+    top: 126px;
+    right: 47.5%;
+    width: 5%;
+    height: 23px;
+    background: url("img/drop-holder.png")no-repeat;
+}
+.thick-line{
+    float: left;
+    width: 35%;
+    border-top: 4px solid #a4b3c4;
+}
+.thin-line{
+    float: right;
+    width: 65%;
+    border-top: 2px solid #cccfd0;
+    margin-top: 1px;
+}
 
 
 
@@ -178,7 +326,17 @@ nav li a {
     font-weight:normal;
     font-style:normal;
 }
-
+h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+p {
+    font-size: 14px;
+}
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
