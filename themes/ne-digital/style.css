@@ -217,6 +217,8 @@ nav li a {
 }
 .home-slide {
     z-index: 1;
+    height: 100%;
+    width: 100%;
 }
 .home-sidebar {
     z-index: 2;
@@ -226,13 +228,13 @@ nav li a {
     top: 0;
     left: 0;
     background: #ffffff;
-    opacity: 0.7;
+    opacity: 0.9;
 }
-.home-testimonial {
+.home-testimonial, .right-testimonial {
     border-bottom: 1px solid #f1f1f3;
     padding: 75px 9.4% 45px 10.5%;
 }
-.left-call-today {
+.left-call-today, .right-call-today {
     border-top: 1px solid #e5e5e6;
     border-bottom: 1px solid #f1f1f3;
     padding: 75px 9.4% 45px 10.5%;
@@ -311,7 +313,7 @@ nav li a {
 .drop-action {
     display: block;
     margin: 0 auto;
-    width: 5%;
+    width: 50px;
     height: 23px;
 }
 .down-button {
@@ -320,9 +322,41 @@ nav li a {
 .up-button {
     background: url("img/up-drop-holder.png")no-repeat;
 }
+.main-content {
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+}
 
-
-
+.page-bar {
+    float: left;
+    width: 100%;
+    min-height: 90px;
+    background: #f2f6f9;
+    margin-top: 0;
+    padding-top: 0;
+}
+.main-tout {
+    float: left;
+    width: 99%;
+}
+.main-section {
+    float: left;
+    width: 74%;
+}
+.right-sidebar {
+    float: right;
+    width: 25%;
+}
+.weird-line {
+    display: block;
+    float: right;
+    width: 5px;
+    height: 1000px;
+    margin-top: 70px;
+    background: #ff00ff;
+}
 
 /*------------------------------------*\
     IMAGES

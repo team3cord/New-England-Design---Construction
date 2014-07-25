@@ -2,8 +2,8 @@
 <main class="home-main">
 
      <div class="home-slide">
-        <?//php echo get_field('home_slider'); ?>
-        <img style="width: 100%;" src="<?php echo get_template_directory_uri(); ?>/img/kitchen-1.png">
+        <?php echo get_field('home_slider'); ?>
+<!--        <img style="width: 100%;height: 100%;" src="<?php echo get_template_directory_uri(); ?>/img/kitchen-1.png"> -->
     </div>
     <div class="home-drop">
         <div class="drop-tab drop-light">

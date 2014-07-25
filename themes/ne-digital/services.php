@@ -1,45 +1,71 @@
 <?php /* Template Name: SERVICES */ get_header(); ?>
 
-    <main role="main">
-        <!-- section -->
-        <section>
+    <main class="main-content">
 
-            <h1><?php the_title(); ?></h1>
+        <div class="page-bar">
+             <h2><?php the_title(); ?></h2>
+        </div>
 
-            <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-                <!-- article -->
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                    <?php the_content(); ?>
+        <div class="main-section">
+            <article class="main-tout">
+                <?php echo get_field('service_tout'); ?>
+            </article>
+            <?php
 
-                    <?php comments_template( '', true ); // Remove if you don't want comments ?>
+            // check if the repeater field has rows of data
+            if( have_rows('service_repeater') ):
 
-                    <br class="clear">
+                // loop through the rows of data
+                while ( have_rows('service_repeater') ) : the_row();
 
-                    <?php edit_post_link(); ?>
+                    // display a sub field value
+                    ?>
+                        <article>
+                             <h2><?php the_sub_field('section_title'); ?></h2>
+                                <span class="thick-line"></span><span class="thin-line"></span>
+                             <?php the_sub_field('section_content'); ?>
+                        </article>
+                <?php
 
-                </article>
-                <!-- /article -->
+                endwhile;
 
-            <?php endwhile; ?>
+            else :
 
-            <?php else: ?>
+                // no rows found
 
-                <!-- article -->
-                <article>
+            endif;
 
-                    <h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-                </article>
-                <!-- /article -->
-
-            <?php endif; ?>
-
-        </section>
+            ?>
+        </div>
         <!-- /section -->
+        <aside class="right-sidebar">
+                <div class="right-call-today">
+                    <h2><?php echo get_field('call_today_consultation', 4); ?></h2>
+                    <span class="thick-line"></span><span class="thin-line"></span></br>
+                    <div class="call-tout">
+                        <?php echo get_field('call_today_tout'); ?>
+                    </div>
+                    <a href="tel:<?php echo get_field('call_today_phone', 4); ?>"><?php echo get_field('call_today_phone', 4); ?></a>
+                </div>
+                <div class="right-testimonial">
+                    <h2><?php echo get_field('sidebar_header', 4); ?></h2>
+                    <span class="thick-line"></span><span class="thin-line"></span>
+                    <div class="home-sidebar-content">
+                        <?php echo do_shortcode("[testimonial_rotator id='40']"); ?>
+                    </div>
+                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/guild-quality.png"></a>
+                </div>
+
+        </aside>
+        <div class="weird-line"></div>
+
+
+
+
+
     </main>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
