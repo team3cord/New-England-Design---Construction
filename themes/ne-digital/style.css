@@ -188,7 +188,9 @@ nav li a {
 }
 /* footer */
 .footer {
+    position: relative;
     float: left;
+    z-index: 2;
     width: 100%;
     height: 28px;
     border-top: 1px solid #81888b;
@@ -217,14 +219,19 @@ nav li a {
 }
 .home-slide {
     z-index: 1;
-}
-.home-sidebar {
-    z-index: 2;
-    width: 25%;
-    height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    width:100%;
+}
+.home-sidebar {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 25%;
+    height: 100%;
+   /* position: absolute;
+    top: 0;
+    left: 0;*/
     background: #ffffff;
     opacity: 0.7;
 }
@@ -241,15 +248,29 @@ nav li a {
     font-size: 18px;
     color: #f18c46;
 }
+.thick-line{
+    float: left;
+    width: 35%;
+    border-top: 4px solid #a4b3c4;
+}
+.thin-line{
+    float: right;
+    width: 65%;
+    border-top: 2px solid #cccfd0;
+    margin-top: 1px;
+}
 .double-border{
     border-top: 1px solid #e5e5e6;
 }
 .home-drop {
     z-index: 2;
+    position: relative;
+    float: right;
     width: 75%;
-    position: absolute;
+    height: inherit;
+   /* position: absolute;
     top: 0;
-    right: 0;
+    right: 0;*/
     padding: 38px 3%;
     background: rgba(142, 174, 198, 0.4);
 }
@@ -277,6 +298,7 @@ nav li a {
     color: #ffffff;
 }
 .drop-content {
+    position: relative;
     display: none;
     float: left;
     padding-top: 40px;
@@ -284,25 +306,25 @@ nav li a {
 .home-drop p {
     color: #ffffff;
 }
+.drop-nav-btn {
+    position: relative;
+    float: right;
+    width:75%;
+    height: 23px;
+    background: #00ff00;
+}
 .drop-action {
-    position: absolute;
+    z-index: 2;
+    display: block;
+    margin: 0 auto;
+    /*position: absolute;
     top: 126px;
-    right: 47.5%;
-    width: 5%;
+    right: 47.5%;*/
+    width: 50px;
     height: 23px;
     background: url("img/drop-holder.png")no-repeat;
 }
-.thick-line{
-    float: left;
-    width: 35%;
-    border-top: 4px solid #a4b3c4;
-}
-.thin-line{
-    float: right;
-    width: 65%;
-    border-top: 2px solid #cccfd0;
-    margin-top: 1px;
-}
+
 
 
 
