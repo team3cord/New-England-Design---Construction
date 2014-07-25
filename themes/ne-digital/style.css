@@ -261,14 +261,18 @@ nav li a {
     position: absolute;
     top: 0;
     right: 0;
-
+}
+.drop-light {
+    background: rgba(142, 174, 198, 0.55);
+}
+.drop-dark {
+    background: rgba(142, 174, 198, 0.9);
 }
 .drop-tab {
     position: relative;
     float: left;
     width: 100%;
     padding: 38px 3%;
-    background: rgba(142, 174, 198, 0.4);
 
 }
 .drop-tab h1 {
@@ -294,7 +298,6 @@ nav li a {
     display: none;
     float: left;
     padding: 38px 3%;
-    background: rgba(142, 174, 198, 0.4);
 }
 .home-drop p {
     color: #ffffff;
@@ -303,14 +306,19 @@ nav li a {
     float: right;
     width: 100%;
     height: 23px;
-    background: #ff00ff;
+    background: none;
 }
 .drop-action {
     display: block;
     margin: 0 auto;
     width: 5%;
     height: 23px;
+}
+.down-button {
     background: url("img/drop-holder.png")no-repeat;
+}
+.up-button {
+    background: url("img/up-drop-holder.png")no-repeat;
 }
 
 

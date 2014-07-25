@@ -6,15 +6,15 @@
         <img style="width: 100%;" src="<?php echo get_template_directory_uri(); ?>/img/kitchen-1.png">
     </div>
     <div class="home-drop">
-        <div class="drop-tab">
+        <div class="drop-tab drop-light">
             <h1><?php echo get_field('drop_down_header'); ?></h1>
             <a class="btn-home-drop" href="#"><?php echo get_field('drop_down_button'); ?></a>
         </div>
-        <div class="drop-content">
+        <div class="drop-content drop-light">
             <?php echo get_field('drop_down_content'); ?>
         </div>
         <div class="drop-action-div">
-            <a class="drop-action" href="#"></a>
+            <a class="drop-action down-button" href="#"></a>
         </div>
     </div>
     <aside class="home-sidebar">
@@ -38,11 +38,26 @@
 </main>
 <script>
     jQuery(function($){
-        $('.drop-action').on('click', function(e){
+        var dropButton = $('.drop-action');
+        var dropContent = $('.drop-content');
+        var dropTab = $('.drop-tab');
+        dropButton.on('click', function(e){
             e.preventDefault();
-            $('.drop-content').slideDown('slow');
-
-        });
+            if (dropButton.hasClass('down-button')){
+                dropContent.slideDown('slow', function(){
+                    dropButton.addClass('up-button').removeClass('down-button');
+                    dropTab.addClass('drop-dark').removeClass('drop-light');
+                    dropContent.addClass('drop-dark').removeClass('drop-light');
+                });
+            }
+            else if (dropButton.hasClass('up-button')){
+                dropContent.slideUp('slow', function(){
+                    dropButton.addClass('down-button').removeClass('up-button');
+                    dropTab.addClass('drop-light').removeClass('drop-dark');
+                    dropContent.addClass('drop-light').removeClass('drop-dark');
+                });
+            }
+        })
     });
 </script>
 <?php get_footer(); ?>
