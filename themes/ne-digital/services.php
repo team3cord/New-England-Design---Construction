@@ -23,8 +23,8 @@
                     // display a sub field value
                     ?>
                         <article>
-                             <h2><?php the_sub_field('section_title'); ?></h2>
-                                <span class="thick-line"></span><span class="thin-line"></span>
+                             <h3><?php the_sub_field('section_title'); ?></h3>
+                                <span class="thick-line"></span><span class="thin-line"></span><br>
                              <?php the_sub_field('section_content'); ?>
                         </article>
                 <?php
@@ -42,20 +42,22 @@
         <!-- /section -->
         <aside class="right-sidebar">
                 <div class="right-call-today">
-                    <h2><?php echo get_field('call_today_consultation', 4); ?></h2>
+                    <h3><?php echo get_field('call_today_consultation', 4); ?></h3>
                     <span class="thick-line"></span><span class="thin-line"></span></br>
                     <div class="call-tout">
                         <?php echo get_field('call_today_tout'); ?>
                     </div>
-                    <a href="tel:<?php echo get_field('call_today_phone', 4); ?>"><?php echo get_field('call_today_phone', 4); ?></a>
+                    <a class="orange-phone" href="tel:<?php echo get_field('call_today_phone', 4); ?>"><?php echo get_field('call_today_phone', 4); ?></a></br>
+                    <a class="btn-contact" href="/contact"><?php echo get_field('contact_button_text'); ?></a>
+
                 </div>
                 <div class="right-testimonial">
-                    <h2><?php echo get_field('sidebar_header', 4); ?></h2>
+                    <h3><?php echo get_field('sidebar_header', 4); ?></h3>
                     <span class="thick-line"></span><span class="thin-line"></span>
                     <div class="home-sidebar-content">
                         <?php echo do_shortcode("[testimonial_rotator id='40']"); ?>
                     </div>
-                    <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/guild-quality.png"></a>
+                    <a  href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/guild-quality.png"></a>
                 </div>
 
         </aside>
@@ -67,5 +69,5 @@
 
     </main>
 
-
+<?php get_template_part('sub', 'footer'); ?>
 <?php get_footer(); ?>

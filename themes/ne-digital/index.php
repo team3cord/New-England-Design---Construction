@@ -29,7 +29,7 @@
         <div class="left-call-today">
             <h2><?php echo get_field('call_today_consultation'); ?></h2>
             <span class="thick-line"></span><span class="thin-line"></span></br>
-            <a href="tel:<?php echo get_field('call_today_phone'); ?>"><?php echo get_field('call_today_phone'); ?></a>
+            <a class="orange-phone" href="tel:<?php echo get_field('call_today_phone'); ?>"><?php echo get_field('call_today_phone'); ?></a>
         </div>
         <div class="double-border"></div>
     </aside>

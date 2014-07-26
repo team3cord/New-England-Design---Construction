@@ -206,6 +206,36 @@ nav li a {
     font-size: 11px;
     margin: 8px 2.5% 0 0;
 }
+.sub-footer {
+    float: left;
+    width: 100%;
+    min-height: 125px;
+    background: #f2f6f9;
+    padding: 29px 3% 0 3%;
+}
+.co-info {
+    float: left;
+
+}
+.co-info span{
+    font-size: 13px;
+}
+.co-email a {
+    color: #f18c46;
+
+    text-decoration: underline;
+}
+.call-for{
+    float: right;
+}
+.call-for span {
+    font-size: 13px;
+    float: right;
+}
+.call-for a {
+    font-size: 20px;
+    float: right;
+}
 
 /*------------------------------------*\
     PAGES
@@ -230,16 +260,16 @@ nav li a {
     background: #ffffff;
     opacity: 0.9;
 }
-.home-testimonial, .right-testimonial {
+.home-testimonial {
     border-bottom: 1px solid #f1f1f3;
     padding: 75px 9.4% 45px 10.5%;
 }
-.left-call-today, .right-call-today {
+.left-call-today {
     border-top: 1px solid #e5e5e6;
     border-bottom: 1px solid #f1f1f3;
     padding: 75px 9.4% 45px 10.5%;
 }
-.left-call-today a {
+.orange-phone {
     font-size: 18px;
     color: #f18c46;
 }
@@ -335,29 +365,54 @@ nav li a {
     min-height: 90px;
     background: #f2f6f9;
     margin-top: 0;
-    padding-top: 0;
+    padding: 0 2.7%;
 }
+.page-bar h2 {
+    margin-top: 27px;
+}
+
 .main-tout {
     float: left;
     width: 99%;
 }
 .main-section {
     float: left;
-    width: 74%;
+    width: 65%;
+    padding: 50px 2.7% 200px 2.7%;
 }
 .right-sidebar {
     float: right;
-    width: 25%;
+    width: 33.5%;
 }
 .weird-line {
     display: block;
     float: right;
-    width: 5px;
+    width: 1px;
     height: 1000px;
     margin-top: 70px;
-    background: #ff00ff;
+    background: #cccfd0;
 }
-
+.right-testimonial {
+    padding: 75px 9.4% 45px 10.5%;
+}
+.testimonial_rotator_wrap {
+    margin-left: 0;
+    padding-left: 0;
+}
+.testimonial_rotator_quote {
+    font-size: 14px;
+}
+.right-call-today {
+    padding: 75px 9.4% 45px 10.5%;
+}
+.btn-contact {
+    float: left;
+    font-size: 18px;
+    color: #ffffff;
+    background: #82a5c0;
+    padding: 9px 35px;
+    margin: 25px 0 30px 0;
+}
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/
@@ -383,6 +438,10 @@ h1 {
     text-transform: uppercase;
 }
 h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+h3 {
     font-size: 16px;
     text-transform: uppercase;
 }
