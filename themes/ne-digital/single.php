@@ -1,67 +1,87 @@
 <?php get_header(); ?>
 
 	<main role="main">
-	<!-- section -->
-	<section>
+        <div class="page-bar">
+            <div class="page-header">
+             <h2><?php the_title(); ?></h2>
+            </div>
+            <div class="main-date">
+                <span class=""><?php the_time('F j, Y'); ?></span>
+            </div>
+        </div>
+        <div class="main-section">
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+            <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <!-- article -->
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
+                    <?php the_content(); // Dynamic Content ?>
 
-			<?php the_content(); // Dynamic Content ?>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+                    <span class="blog-list-meta">Published <?php the_time('F j, Y'); ?> | By <?php the_author_posts_link(); ?></span><br>
+                    <div class="mc-share-this">
+                        <span class='st_facebook_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+                        <span class='st_linkedin_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+                        <span st_via='@NEDesignConst' st_username='@NEDesignConst' class='st_twitter_hcount' st_title='<?php the_title(); ?>' st_url='<?php the_permalink(); ?>'></span>
+                    </div>
+                </article>
+                <!-- /article -->
 
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+            <?php endwhile; ?>
 
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+            <?php else: ?>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+            <!-- article -->
+            <article>
 
-			<?php comments_template(); ?>
+                <h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
 
-		</article>
-		<!-- /article -->
+            </article>
+            <!-- /article -->
 
-	<?php endwhile; ?>
+            <?php endif; ?>
 
-	<?php else: ?>
+        </div>
+        <aside class="right-sidebar">
+            <div class="right-call-today">
+                <h3><?php echo get_field('call_today_consultation', 4); ?></h3>
+                <span class="thick-line"></span><span class="thin-line"></span></br>
+                <div class="call-tout">
+                    <?php echo get_field('call_today_tout', 16); ?>
+                </div>
+                <a class="orange-phone" href="tel:<?php echo get_field('call_today_phone', 4); ?>"><?php echo get_field('call_today_phone', 4); ?></a></br>
+                <a class="btn-contact" href="/contact"><?php echo get_field('contact_button_text', 8); ?></a>
 
-		<!-- article -->
-		<article>
+            </div>
+            <div class="right-email-signup">
+                <h3><?php echo get_field('sidebar_email_header', 16); ?></h3>
+                <span class="thick-line"></span><span class="thin-line"></span></br>
+                <div class="email-tout">
+                    <?php echo get_field('sidebar_email_tout', 16); ?>
+                </div>
+                <div class="email-form">
+                    <?php echo get_field('email_signup-form'); ?>
+                </div>
+            </div>
+            <div class="right-testimonial">
+                <h3><?php echo get_field('sidebar_header', 4); ?></h3>
+                <span class="thick-line"></span><span class="thin-line"></span>
+                <div class="home-sidebar-content">
+                    <?php echo do_shortcode("[testimonial_rotator id='40']"); ?>
+                </div>
+                <a  href="http://www.guildquality.com/NewEnglandDesignConstruction"><img src="<?php echo get_template_directory_uri(); ?>/img/guild-quality.png"></a>
+            </div>
 
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+        </aside>
+        <div class="weird-line"></div>
 
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
-	</section>
-	<!-- /section -->
 	</main>
+<script charset="utf-8" type="text/javascript">var switchTo5x=true;</script>
+<script charset="utf-8" type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script charset="utf-8" type="text/javascript">stLight.options({"publisher":"wp.38898937-6b31-4992-9175-7aa4df929169"});var st_type="wordpress3.9.1";</script>
 
-<?php get_sidebar(); ?>
-
+<?php get_template_part('sub', 'footer'); ?>
 <?php get_footer(); ?>

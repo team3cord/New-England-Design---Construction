@@ -24,7 +24,7 @@
             <div class="home-sidebar-content">
                 <?php echo do_shortcode("[testimonial_rotator id='40']"); ?>
             </div>
-        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/guild-quality.png"></a>
+        <a href="http://www.guildquality.com/NewEnglandDesignConstruction"><img src="<?php echo get_template_directory_uri(); ?>/img/guild-quality.png"></a>
         </div>
         <div class="left-call-today">
             <h2><?php echo get_field('call_today_consultation'); ?></h2>

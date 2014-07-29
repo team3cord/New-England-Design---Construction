@@ -73,6 +73,12 @@ ul {
 
 }
 
+.orange-text a {
+   color: #f18c46;
+}
+.orange-text {
+    color: #f18c46;
+}
 /*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
@@ -393,7 +399,8 @@ nav li a {
     background: #cccfd0;
 }
 .right-testimonial {
-    padding: 75px 9.4% 45px 10.5%;
+    float: left;
+    padding: 25px 9.4% 25px 10.5%;
 }
 .testimonial_rotator_wrap {
     margin-left: 0;
@@ -403,7 +410,13 @@ nav li a {
     font-size: 14px;
 }
 .right-call-today {
-    padding: 75px 9.4% 45px 10.5%;
+    float: left;
+    padding: 70px 9.4% 25px 10.5%;
+}
+
+.right-connect-tout {
+    float: left;
+    padding: 25px 9.4% 25px 10.5%;
 }
 .btn-contact {
     float: left;
@@ -411,8 +424,232 @@ nav li a {
     color: #ffffff;
     background: #82a5c0;
     padding: 9px 35px;
-    margin: 25px 0 30px 0;
+    margin: 25px 0 0 0;
 }
+.mc-contact-form {
+    float: left;
+    width: 100%;
+    margin-bottom: 75px;
+}
+
+.mc-contact-form input[type='text'], .mc-contact-form input[type='email'], .mc-contact-form input[type='tel'] {
+    float: left;
+    width: 375px;
+    height: 35px;
+    border: 1px solid #d6d9d9;
+    padding-left: 15px;
+    margin: 17px 10% 17px 0;
+}
+.mc-contact-form textarea {
+    float: left;
+    width: 70%;
+    height: 130px;
+    border: 1px solid #d6d9d9;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin: 17px 10% 17px 0;
+}
+.mc-contact-form select {
+    background: transparent;
+    color: #616161;
+    width: 336px;
+    padding: 5px;
+    line-height: 1;
+    border: 0;
+    height: 34px;
+    -webkit-appearance: none;
+
+}
+.overpower-select {
+    float: left;
+    margin: 25px 12px 25px 0;
+    padding-left: 10px;
+    width: 375px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #d6d9d9;
+    font-size: 14px;
+    background: url("img/contact-select.png") no-repeat right;
+}
+.mc-submit {
+    float: left;
+    width: 100%;
+}
+.mc-contact-form input[type='submit']{
+    float: left;
+    width: 123px;
+    height: 38px;
+    background: #82a5c0;
+    font-size: 14px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #cddbe6;
+    color: #ffffff;
+}
+.mc-contact-form input[type='submit']:hover {
+    background: #648aa8;
+}
+.contact-how {
+    float: left;
+    width: 100%;
+}
+.getting-here a {
+    color: #f18c46;
+    text-decoration: underline;
+}
+.contact-social {
+    margin: 0;
+    padding: 0;
+}
+.contact-social li {
+    margin: 15px 0 10px 0;
+}
+.contact-social a {
+    font-size: 14px;
+    color: #f18c46;
+    padding: 10px 0 10px 40px;
+    text-decoration: underline;
+}
+.mc-fb-c a {
+    background: url("img/fb.png") no-repeat 0 8px;
+}
+.mc-fb-c a:hover {
+    background: url("img/fb-hov.png") no-repeat 0 8px;
+}
+.mc-in-c a {
+    background: url("img/in.png") no-repeat 0 8px;
+}
+.mc-in-c a:hover {
+    background: url("img/in-hov.png") no-repeat 0 8px;
+}
+.mc-twt-c a {
+    background: url("img/twt.png") no-repeat 0 8px;
+}
+.mc-twt-c a:hover {
+    background: url("img/twt-hov.png") no-repeat 0 8px;
+}
+.mc-hou-c a {
+    background: url("img/houzz.png") no-repeat 0 8px;
+}
+.mc-hou-c a:hover {
+    background: url("img/houzz-hov.png") no-repeat 0 8px;
+}
+.page-header {
+    float: left;
+    width: 20%;
+}
+.sidebar-widget {
+    width: 79%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.widget_categories h3 {
+    display: none;
+}
+.view-all {
+    float: right;
+    height: 31px;
+    background: #82a5c0;
+    font-size: 14px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #cddbe6;
+    color: #ffffff;
+    margin-top: 31px;
+    margin-right: 15px;
+    padding: 6px 15px;
+}
+.view-all:hover {
+    background: #648aa8;
+    color:#ffffff;
+}
+.widget_categories ul {
+    margin: 0;
+    padding: 0;
+}
+.widget_categories li {
+    display: inline-block;
+    font-size: 14px;
+    float: right;
+    margin: 0 15px 0 0;
+    padding: 37px 15px;
+}
+.blog-list-post {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-bottom: 65px;
+}
+.blog-list-img {
+    float: left;
+    width: 31%;
+    background: #ff00ff;
+}
+.blog-list-content {
+    float: left;
+    width: 69%;
+    background: #00ff00;
+}
+.blog-list-content p {
+    font-size: 14px;
+    margin: 10px 0 10px 0;
+}
+.blog-list-title {
+    display: block;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+.blog-list-meta {
+    font-size: 12px;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+.view-article {
+    display: none;
+}
+.read-more {
+    font-size: 14px;
+    text-decoration: underline;
+}
+.newer-posts {
+    width: 50%;
+    float:left;
+    text-align: left;
+}
+.older-posts {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+.main-date {
+    float: right;
+    font-size: 24px;
+    padding-right: 13px;
+    margin-top: 27px;
+}
+.right-email-signup {
+    float: left;
+    padding: 25px 9.4% 25px 10.5%;
+}
+.mc-share-this {
+    clear: both;
+    width: 100%;
+    margin: 50px 0 50px 0;
+}
+.stButton .stfb, .stButton .stTwbutton, .stMainServices {
+     height:25px!important;
+ }
+.mc-share-this .stButton .stButton_gradient {
+
+    height:24px!important;
+}
+
 /*------------------------------------*\
     IMAGES
 \*------------------------------------*/

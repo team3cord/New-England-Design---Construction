@@ -1,10 +1,17 @@
 <?php get_header(); ?>
+<main role="main">
+    <div class="page-bar">
+        <div class="page-header">
+            <h2><?php  echo get_the_author(); ?></h2>
+        </div>
 
-	<main role="main">
-		<!-- section -->
-		<section>
-
-		<?php if (have_posts()): the_post(); ?>
+        <div class="sidebar-widget">
+            <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
+            <a class="view-all" href="<?php echo get_permalink(16); ?>">VIEW ALL</a>
+        </div>
+    </div>
+    <div class="main-section">
+            <?php if (have_posts()): the_post(); ?>
 
 			<h1><?php _e( 'Author Archives for ', 'html5blank' ); echo get_the_author(); ?></h1>
 
@@ -21,35 +28,18 @@
 		<?php rewind_posts(); while (have_posts()) : the_post(); ?>
 
 			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <article class="blog-list-post">
+                <div class="blog-list-img" >
+                    <a href="<?php the_permalink(); ?>"><?the_post_thumbnail('thumbnail'); ?></a>
+                </div>
+                <div class="blog-list-content">
+                    <span class="blog-list-title"><a href="<?php the_permalink(); ?>"><?the_title(); ?></a></span><br>
+                    <span class="blog-list-meta">Published <?php the_time('F j, Y'); ?> | By <?php the_author_posts_link(); ?></span><br>
+                    <p><?php the_excerpt(); ?></p>
+                    <a class="orange-text read-more" href="<?php the_permalink(); ?>">Read More ...</a>
+                </div>
+            </article>
 
-				<!-- post thumbnail -->
-				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail(array(120,120)); // Declare pixel size you need inside the array ?>
-					</a>
-				<?php endif; ?>
-				<!-- /post thumbnail -->
-
-				<!-- post title -->
-				<h2>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-				</h2>
-				<!-- /Post title -->
-
-				<!-- post details -->
-				<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-				<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-				<span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-				<!-- /post details -->
-
-				<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
-
-				<br class="clear">
-
-				<?php edit_post_link(); ?>
-
-			</article>
 			<!-- /article -->
 
 		<?php endwhile; ?>
@@ -68,10 +58,42 @@
 
 			<?php get_template_part('pagination'); ?>
 
-		</section>
-		<!-- /section -->
-	</main>
 
-<?php get_sidebar(); ?>
+
+
+
+    </div>
+    <!-- /section -->
+    <aside class="right-sidebar">
+        <div class="right-call-today">
+            <h3><?php echo get_field('call_today_consultation', 4); ?></h3>
+            <span class="thick-line"></span><span class="thin-line"></span></br>
+            <div class="call-tout">
+                <?php echo get_field('call_today_tout', 16); ?>
+            </div>
+            <a class="orange-phone" href="tel:<?php echo get_field('call_today_phone', 4); ?>"><?php echo get_field('call_today_phone', 4); ?></a></br>
+            <a class="btn-contact" href="/contact"><?php echo get_field('contact_button_text', 8); ?></a>
+
+        </div>
+        <div class="right-testimonial">
+            <h3><?php echo get_field('sidebar_header', 4); ?></h3>
+            <span class="thick-line"></span><span class="thin-line"></span>
+            <div class="home-sidebar-content">
+                <?php echo do_shortcode("[testimonial_rotator id='40']"); ?>
+            </div>
+            <a  href="http://www.guildquality.com/NewEnglandDesignConstruction"><img src="<?php echo get_template_directory_uri(); ?>/img/guild-quality.png"></a>
+        </div>
+
+    </aside>
+    <div class="weird-line"></div>
+
+
+
+
+
+</main>
+
+<?php get_template_part('sub', 'footer'); ?>
+
 
 <?php get_footer(); ?>
