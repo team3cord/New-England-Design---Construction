@@ -587,12 +587,10 @@ nav li a {
 .blog-list-img {
     float: left;
     width: 31%;
-    background: #ff00ff;
 }
 .blog-list-content {
     float: left;
     width: 69%;
-    background: #00ff00;
 }
 .blog-list-content p {
     font-size: 14px;
@@ -627,6 +625,9 @@ nav li a {
     float: right;
     text-align: right;
 }
+.older-posts a, .newer-posts a {
+    font-size: 14px;
+}
 .main-date {
     float: right;
     font-size: 24px;
@@ -648,6 +649,17 @@ nav li a {
 .mc-share-this .stButton .stButton_gradient {
 
     height:24px!important;
+}
+.nimble-description {
+    float: left;
+    padding: 50px 9.4% 25px 10.5%;
+}
+.single-pro.right-call-today {
+    padding-top: 25px!important;
+}
+.project-content a {
+    color: #f18c46;
+    text-decoration: underline;
 }
 
 /*------------------------------------*\
