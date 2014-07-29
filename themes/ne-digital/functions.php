@@ -184,7 +184,7 @@ if (function_exists('register_sidebar'))
     ));
 
     // Define Sidebar Widget Area 2
-    register_sidebar(array(
+  /*  register_sidebar(array(
         'name' => __('Blog Email Sign Up', 'html5blank'),
         'description' => __('', 'html5blank'),
         'id' => 'widget-area-2',
@@ -193,6 +193,16 @@ if (function_exists('register_sidebar'))
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ));
+    // Define Sidebar Widget Area 3
+    register_sidebar(array(
+        'name' => __('Nimble Portfolio Filter', 'html5blank'),
+        'description' => __('', 'html5blank'),
+        'id' => 'widget-area-3',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    )); */
 }
 
 // Remove wp_head() injected Recent Comment styles
@@ -440,7 +450,7 @@ add_action( 'init', 'custom_post_type', 0 );
 
 */
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
-function create_post_type_html5()
+/*function create_post_type_html5()
 {
     register_taxonomy_for_object_type('category', 'ne-digital'); // Register Taxonomies for Category
     register_taxonomy_for_object_type('post_tag', 'ne-digital');
@@ -475,7 +485,7 @@ function create_post_type_html5()
             'category'
         ) // Add Category and Post Tags support
     ));
-}
+}*/
 
 /*------------------------------------*\
 	ShortCode Functions

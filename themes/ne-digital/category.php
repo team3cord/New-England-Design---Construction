@@ -7,6 +7,7 @@
             </div>
 
             <div class="sidebar-widget">
+
                 <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
                 <a class="view-all" href="<?php echo get_permalink(16); ?>">VIEW ALL</a>
             </div>
@@ -16,7 +17,9 @@
 
             <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-
+<?php if(is_singular('Portfolio Item')){ ?>
+                    <h1>Hello World</h1>
+                <?php }; ?>
             <article class="blog-list-post">
                 <div class="blog-list-img" >
                     <a href="<?php the_permalink(); ?>"><?the_post_thumbnail('thumbnail'); ?></a>

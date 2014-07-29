@@ -17,12 +17,18 @@ foreach ($items as $item) {
     $item_atts = apply_filters('nimble_portfolio_item_atts', $item_atts, $item);
     ?>
     <div <?php echo NimblePortfolioPlugin::phpvar2htmlatt($item_atts); ?>>
-        <div class="title"><?php echo $item->getTitle(); ?></div>    
-        <div class="itembox">
-            <a href="<?php echo esc_url($item->getData('nimble-portfolio')); ?>" rel="<?php echo apply_filters('nimble_portfolio_lightbox_galleryname', 'nimblebox[nimble_portfolio_gal_default]', $item); ?>" <?php do_action('nimble_portfolio_lightbox_link_atts', $item); ?> title="<?php echo esc_attr($item->getTitle()); ?>">
-                <img src="<?php echo $item->getThumbnail('480x480', true); ?>" />
-                <div class="-mask"> </div>
-                <div class="genericon genericon-<?php echo $hover_icon; ?>"></div>
+        <div class="title"><?//php echo $item->getTitle(); ?></div>
+        <div class="itembox" style='background: url("<?php echo $item->getThumbnail('large', true); ?>") no-repeat; background-size: cover;background-position: center center;'>
+            <a href="<?php echo $item->getPermalink(); ?>" rel="<?//php echo apply_filters('nimble_portfolio_lightbox_galleryname', 'nimblebox[nimble_portfolio_gal_default]', $item); ?>" <?//php do_action('nimble_portfolio_lightbox_link_atts', $item); ?> title="<?php echo esc_attr($item->getTitle()); ?>">
+                <!-- <img class="itembox-img" src="<?//php echo $item->getThumbnail('large', true); ?>" />-->
+                <div class="-mask">
+
+                </div>
+                <div class="genericon genericon-">
+                    <span class="hover-title"><?php echo $item->getTitle(); ?></span><br>
+                    <?php echo get_field('location_city', $item->ID); ?>
+
+                </div>
             </a>    
         </div>
         <?php if ($readmore_flag || $viewproject_flag) { ?> 

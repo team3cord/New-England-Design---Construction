@@ -80,28 +80,39 @@ if (!class_exists('NimblePortfolio')) {
         function renderTemplate() {
             ?>
             <link rel="stylesheet" type="text/css" href="<?php echo $this->getTemplateUrl("skin.css"); ?>" />
+
             <?php do_action('nimble-portfolio-template-css', $this); ?>
 
             <div class="nimble-portfolio <?php echo apply_filters("nimble_portfolio_skin_classes", "-skin-$this->skin", $this); ?>">
+                <div class="page-bar">
+                  <div class="page-header">
+                    <h2><?php the_title(); ?></h2>
+                  </div>
 
-                <?php do_action('nimble_portfolio_skin_before', $this); ?>
-
-                <?php if (!$this->atts['hide_filters']) { ?>
-                    <div class="-filters <?php echo apply_filters("nimble_portfolio_skin_filters_classes", "", $this); ?>">
-                        <?php echo apply_filters('nimble_portfolio_filter_all', sprintf('<a href="#" rel="*" class="-filter active">%s</a>', __("All"))); ?>
-                        <?php require ($this->getTemplatePath("filters.php")); ?>
-                    </div>        
-                <?php } ?>
-
-                <?php do_action('nimble_portfolio_skin_between', $this); ?>
-
-                <div class="-items <?php echo apply_filters("nimble_portfolio_skin_items_classes", "", $this); ?>">
-                    <?php require ($this->getTemplatePath("items.php")); ?>
+                    <div class="sidebar-widget">
+                            <?php if (!$this->atts['hide_filters']) { ?>
+                        <div class="-filters mc-filters">
+                            <?php echo apply_filters('nimble_portfolio_filter_all', sprintf('<a href="#" rel="*" class="-filter active">%s</a>', __("All"))); ?>
+                            <?php require ($this->getTemplatePath("filters.php")); ?>
+                        </div>
+                        <a class="view-all" href="<?php echo get_permalink(10); ?>">VIEW ALL</a>
+                            <?php } ?>
+                    </div>
                 </div>
+                <div class="port-wrap">
+                    <?php do_action('nimble_portfolio_skin_before', $this); ?>
 
-                <?php do_action('nimble_portfolio_skin_after', $this); ?>
 
-            </div>        
+                    <?php do_action('nimble_portfolio_skin_between', $this); ?>
+
+                    <div class="-items <?php echo apply_filters("nimble_portfolio_skin_items_classes", "", $this); ?>">
+                    <?php require ($this->getTemplatePath("items.php")); ?>
+                    </div>
+
+                    <?php do_action('nimble_portfolio_skin_after', $this); ?>
+
+                </div>
+            </div>
             <?php
         }
 

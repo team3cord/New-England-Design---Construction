@@ -8,24 +8,22 @@
 
 .-skin-default .-filters .-filter {
     display: inline-block;
-    padding: 3px 7px;
-    margin:2px;
-    border: 1px solid #ccc;
     text-decoration: none;
     outline: none;
 }
 
-.-skin-default .-filters .-filter.active {
+/* .-skin-default .-filters .-filter.active {
     background: #eee;
-}
+} */
 
-.-skin-default .-items {  
+.-skin-default .-items {
+    float: left;
+    width: 100%;
     position: relative;
 }
 .-skin-default .-items .-item {
     float:left;
     width: 31.33%;
-    margin:1%;
 }
 
 .-skin-default .-items .-item.hidden {
@@ -48,14 +46,12 @@
     }
 }
 
-.-skin-default .-items .-item .itembox {
-    width:90%;
-    border: 5px solid #FFFFFF;
-    box-shadow: 3px 3px 5px #888888;
+/*.-skin-default .-items .-item .itembox {
+    width:95%;
     background: #FFFFFF;
     position: relative;
     margin: 0 auto;
-}
+}*/
 
 .-skin-default.-skin-default-square .-items .-item .itembox {
     padding-bottom: 90%;
@@ -97,16 +93,14 @@
 }
 .-skin-default .-items .-item .itembox .genericon {
     color: #FFFFFF;
-    left: 50%;
     opacity: 1.0;
     background: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 50%;
     overflow: hidden;
-    font-size: 48px;
-    width: 48px;
+    margin-top: 100px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
     height: 48px;
-    margin: -24px 0 0 -24px;
 }
 
 
