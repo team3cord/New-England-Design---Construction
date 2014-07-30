@@ -110,7 +110,7 @@ nav  ul {
     padding: 0;
     width: 55%;
     float: left;
-    height: 85px;
+    min-height: 85px;
 }
 nav li {
     display: inline-block;
@@ -118,7 +118,7 @@ nav li {
     position: relative;
     width: 20%;
     height: 60%;
-    margin-top: 30px;
+    margin-top: 27px;
     text-transform: uppercase;
 }
 nav li a {
@@ -127,8 +127,11 @@ nav li a {
     text-align: center;
     padding: 5px 0 5px 0;
 }
-nav li a:hover {
+nav li a span:hover {
     border-bottom: 4px solid #555f62;
+}
+nav li.current-menu-item a span {
+    border-bottom: 4px solid #f18c46;
 }
 .main-logo {
     float: left;
@@ -140,8 +143,48 @@ nav li a:hover {
     margin-left: 20%;
 }
 nav li a {
-    font-size: 13px;
+    font-family: "Futura","Trebuchet MS", Arial, sans-serif;
+    font-size: 16px;
 }
+
+.sub-menu li {
+    display: block;
+    float: left;
+    padding: 14px 5%;
+    margin: 0;
+    width: 100%;
+    height: 38px;
+}
+
+
+.sub-menu {
+    display: none;
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: 120px;
+    padding: 0px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+
+.sub-menu:after
+{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 12px 15px;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -15px;
+    left: 50px;
+}
+
 /* social */
 .head-social {
     float: right;
@@ -196,12 +239,13 @@ nav li a {
 .footer {
     float: left;
     width: 100%;
-    height: 28px;
+    min-height: 28px;
     border-top: 1px solid #81888b;
     background: #555f62;
 }
 .copyright {
     float: left;
+    font-family: "Open Sans",sans-serif;
     font-size: 10px;
     margin: 9px 0 0 2.5%;
     color: #ffffff;
@@ -209,6 +253,7 @@ nav li a {
 .hic {
     float: right;
     color: #ffffff;
+    font-family: "Open Sans",sans-serif;
     font-size: 11px;
     margin: 8px 2.5% 0 0;
 }
@@ -221,6 +266,7 @@ nav li a {
 }
 .co-info {
     float: left;
+    width: 50%;
 
 }
 .co-info span{
@@ -239,6 +285,7 @@ nav li a {
     float: right;
 }
 .call-for a {
+    font-family: "Futura Book", "Futura",sans-serif;
     font-size: 20px;
     float: right;
 }
@@ -276,6 +323,7 @@ nav li a {
     padding: 75px 9.4% 45px 10.5%;
 }
 .orange-phone {
+    font-family: "Futura Book", "Futura", sans-serif;
     font-size: 18px;
     color: #f18c46;
 }
@@ -301,7 +349,7 @@ nav li a {
     right: 0;
 }
 .drop-light {
-    background: rgba(142, 174, 198, 0.55);
+    background: rgba(192, 210, 223, 0.8);
 }
 .drop-dark {
     background: rgba(142, 174, 198, 0.9);
@@ -314,6 +362,7 @@ nav li a {
 
 }
 .drop-tab h1 {
+    font-family: "Futura Light", "Futura", Arial, sans-serif;
     float: left;
     margin:0;
     padding: 0;
@@ -321,6 +370,7 @@ nav li a {
 }
 .btn-home-drop {
     float: right;
+    font-family: "FUTURA OBLIQUE","Futura", sans-serif;
     font-size: 18px;
     color: #ffffff;
     background: #f18c46;
@@ -353,10 +403,10 @@ nav li a {
     height: 23px;
 }
 .down-button {
-    background: url("img/drop-holder.png")no-repeat;
+    background: url("img/hm-drop-dwn.png")no-repeat;
 }
 .up-button {
-    background: url("img/up-drop-holder.png")no-repeat;
+    background: url("img/hm-drop-up.png")no-repeat;
 }
 .main-content {
     width: 100%;
@@ -406,8 +456,10 @@ nav li a {
 .testimonial_rotator_wrap {
     margin-left: 0;
     padding-left: 0;
+    width: 100%;
 }
 .testimonial_rotator_quote {
+    font-family: "Open Sans",sans-serif;
     font-size: 14px;
 }
 .right-call-today {
@@ -416,11 +468,13 @@ nav li a {
 }
 
 .right-connect-tout {
+    width: 100%;
     float: left;
     padding: 25px 9.4% 25px 10.5%;
 }
 .btn-contact {
     float: left;
+    font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
     font-size: 18px;
     color: #ffffff;
     background: #82a5c0;
@@ -432,11 +486,27 @@ nav li a {
     width: 100%;
     margin-bottom: 75px;
 }
+.mc-contact-form input {
+    font-style: italic;
+}
+.mc-contact-form input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #616161;
+}
+.mc-contact-form input:-moz-placholder, textarea:-moz-placholder {
+    color: #616161;
+}
+.mc-contact-form input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #616161;
+}
+.mc-contact-form input:-ms-input-placeholder {
+    color: #616161;
+}
 
 .mc-contact-form input[type='text'], .mc-contact-form input[type='email'], .mc-contact-form input[type='tel'] {
     float: left;
     width: 375px;
     height: 35px;
+    color: #616161;
     border: 1px solid #d6d9d9;
     padding-left: 15px;
     margin: 17px 10% 17px 0;
@@ -446,6 +516,7 @@ nav li a {
     width: 70%;
     height: 130px;
     border: 1px solid #d6d9d9;
+    font-style: italic;
     padding-left: 15px;
     padding-top: 15px;
     margin: 17px 10% 17px 0;
@@ -472,6 +543,9 @@ nav li a {
     border: 1px solid #d6d9d9;
     font-size: 14px;
     background: url("img/contact-select.png") no-repeat right;
+}
+.overpower-select select {
+    font-style: italic;
 }
 .mc-submit {
     float: left;
@@ -562,6 +636,7 @@ nav li a {
     color: #ffffff;
     margin-top: 31px;
     margin-right: 15px;
+    margin-bottom: 15px;
     padding: 7px 15px;
     z-index: 999;
 }
@@ -588,11 +663,13 @@ nav li a {
 }
 .blog-list-img {
     float: left;
-    width: 31%;
+    width: 30%;
+    margin-right: 1%;
 }
 .blog-list-content {
     float: left;
-    width: 69%;
+    width: 67%;
+    margin-left: 1%;
 }
 .blog-list-content p {
     font-size: 14px;
@@ -738,52 +815,251 @@ nav li a {
 \*------------------------------------*/
 
 @font-face {
-	font-family:'Font-Name';
-	src:url('fonts/font-name.eot');
-	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
-		url('fonts/font-name.woff') format('woff'),
-		url('fonts/font-name.ttf') format('truetype'),
-		url('fonts/font-name.svg#font-name') format('svg');
+	font-family:'Futura Light';
+	src:url('fonts/futura-light-webfont.eot');
+	src:url('fonts/futura-light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/futura-light.woff') format('woff'),
+		url('fonts/futura-regular.ttf') format('truetype'),
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+	font-family:'Futura';
+	src:url('fonts/futura-medium-webfont.eot');
+	src:url('fonts/futura-medium-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/futura-medium-webfont.woff') format('woff'),
+		url('fonts/futura-medium-webfont.ttf') format('truetype'),
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+	font-family:'Futura Book';
+	src:url('fonts/futura-book-webfont.eot');
+	src:url('fonts/futura-book-webfont.eot?#iefix') format('embedded-opentype'),
+		url('fonts/futura-book-webfont.woff') format('woff'),
+		url('fonts/futura-book-webfont.ttf') format('truetype'),
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+	font-family:'Futura Oblique';
+	src:url('fonts/futura-oblique.eot');
+	src:url('fonts/futura-oblique.eot?#iefix') format('embedded-opentype'),
+		url('fonts/futura-book-webfont.woff') format('woff'),
+		url('fonts/futura-book-webfont.ttf') format('truetype'),
     font-weight:normal;
     font-style:normal;
 }
 h1 {
+    font-family: "Futura","Trebuchet MS", Arial, sans-serif;
     font-size: 36px;
     text-transform: uppercase;
 }
 h2 {
+    font-family: "Futura","Trebuchet MS", Arial, sans-serif;
     font-size: 24px;
     text-transform: uppercase;
 }
 h3 {
+    font-family: "Futura","Trebuchet MS", Arial, sans-serif;
     font-size: 16px;
     text-transform: uppercase;
 }
 p {
+    font-family: "Open Sans Light","Open Sans",sans-serif;
     font-size: 14px;
 }
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
 
-@media only screen and (min-width:320px) {
+@media only screen and (max-width:1210px) {
+    .btn-home-drop {
+        float: left;
+        margin-top: 15px;
+    }
+}
+@media only screen and (max-width:1140px) {
+   .home-sidebar {
+       width: 30%;
+   }
+   .home-drop {
+        width: 70%;
+   }
+}
+@media only screen and (max-width:1050px) {
+    .home-sidebar {
+        width: 40%;
+    }
+    .home-drop {
+        width: 60%;
+    }
+    .left-call-today {
+        padding-top: 25px;
+    }
 
 }
-@media only screen and (min-width:480px) {
+@media only screen and (max-width:960px) {
+    nav ul {
+        width: 50%;
+        padding-left: 20px;
+    }
+    .head-social {
+        width: 30%;
+    }
+    .home-drop {
+        width: 100%;
+    }
+    .home-sidebar {
+        position: relative;
+        width: 100%;
+    }
+    .btn-home-drop {
+        margin-right: 100px;
+    }
+}
+@media only screen and (max-width:736px) {
+    .sd2-ress-wrapper {
+        display: none;
+    }
+    .home-slide {
+        min-height: 900px;
+        background: url("img/kitchen-1.png")no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .head-social {
+        float: left;
+        width: 36%;
+    }
+    .-skin-default.-columns3 .-item{
+        width: 48%!important;
+     }
+    .sidebar-widget {
+        float: right;
+
+    }
+}
+@media only screen and (max-width:640px) {
+    .mobile-logo {
+        float: left;
+        width: 100%;
+        height: 85px;
+    }
+    .main-logo {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width: 110px;
+    }
+    .main-logo img {
+        margin: 0;
+    }
+    .nav ul {
+        width: 60%;
+    }
+    .head-social {
+        width: 40%;
+    }
+    .head-social ul {
+        float: left;
+    }
+    .main-section {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    .weird-line {
+        display: none;
+    }
+    .right-sidebar {
+        display: block;
+        width: 100%;
+
+    }
 
 }
-@media only screen and (min-width:768px) {
+@media only screen and (max-width:600px) {
+    .sidebar-widget {
+        width: 100%;
+        float: left;
+        padding-right: 12%;
+        margin-bottom: 15px;
+    }
+}
+@media only screen and (max-width:555px) {
+    .nav ul {
+        width: 100%;
+        padding-left: 0;
+    }
+    .head-social {
+        width: 100%;
+    }
+    .head-social ul {
+        width: 235px;
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    .co-info, .call-for {
+        width: 100%;
+        display: block;
+        float: none;
+    }
+    .call-for span ,.call-for a {
+        float: none;
+    }
+    .call-for {
+        margin: 10px 0 ;
+    }
+
 
 }
-@media only screen and (min-width:1024px) {
+@media only screen and (max-width:500px) {
+    .-skin-default.-columns3 .-item{
+        width: 98%!important;
+     }
+    .blog-list-img, .blog-list-content {
+        width: 99%;
+    }
+}
+@media only screen and (max-width:401px) {
+    .nav li {
+        width: 100%;
+        border: 1px solid #cccfd0;
+        height: 85px;
+        margin-top: 0;
+        padding-top: 20px;
+    }
+    .nav li a {
+        font-size: 20px;
+    }
+    .head-social ul {
+        margin-top: 26px;
+    }
+    .copyright {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .mobile-hic {
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    .hic {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: center;
+        margin: 8px 0 8px 0;
+        padding: 10px 0 10px 0;
+    }
 
 }
-@media only screen and (min-width:1140px) {
 
-}
-@media only screen and (min-width:1280px) {
 
-}
+
+
+
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),
 	   only screen and (min-resolution:144dpi) {
 

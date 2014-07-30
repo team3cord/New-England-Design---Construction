@@ -8,7 +8,7 @@
 
 				</p>
 				<!-- /copyright -->
-                <span class="hic">HIC # MA 149737</span>
+                <div class="moblie-hic"> <span class="hic">HIC # MA 149737</span></div>
 			</footer>
 			<!-- /footer -->
 
@@ -26,6 +26,13 @@
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
 		</script>
+        <script>
+             jQuery(function($){
+                   $('nav li a').each(function(){
+                       $(this).wrapInner('<span class="mc-link"></span> ');
+                   })
+             });
+        </script>
 
 	</body>
 </html>
