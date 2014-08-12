@@ -88,6 +88,7 @@
 <script>
     jQuery(function($){
         $('#menu-item-18').addClass('current-menu-item');
+        $('li.current-cat a').addClass('cat-active');
     });
 </script>
 <?php get_footer(); ?>

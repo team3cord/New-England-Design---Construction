@@ -8,7 +8,7 @@
 
             <div class="sidebar-widget">
                 <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
-                <a class="view-all" href="<?php echo get_permalink(16); ?>">ALL</a>
+                <a class="view-all cat-active" href="<?php echo get_permalink(16); ?>">ALL</a>
             </div>
         </div>
         <div class="main-section">

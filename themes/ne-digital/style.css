@@ -531,6 +531,7 @@ ul.sub-menu  a span {
     background: #82a5c0;
     padding: 9px 35px;
     margin: 25px 0 0 0;
+    white-space: nowrap;
 }
 .mc-contact-form {
     float: left;
@@ -676,26 +677,7 @@ ul.sub-menu  a span {
 .widget_categories h3 {
     display: none;
 }
-.view-all {
-    float: right;
-    height: 31px;
-    background: #82a5c0;
-    font-size: 12px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid #cddbe6;
-    color: #ffffff;
-    margin-top: 31px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    padding: 7px 15px;
-    z-index: 999;
-}
-.view-all:hover {
-    background: #648aa8;
-    color:#ffffff;
-}
+
 .widget_categories ul {
     margin: 0;
     padding: 0;
@@ -890,17 +872,57 @@ ul.sub-menu  a span {
 .-filters.mc-filters a:first-of-type {
     display: none;
 }
+.view-all {
+    font-family: "Futura",sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    float: right;
+    margin-top: 32px!important;
+    padding: 5px 24px 2px 24px;
+    color: #555f62;
+  /*  float: right;
+    height: 31px;
+    background: #82a5c0;
+    font-size: 14px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+   border-bottom: 1px solid #cddbe6;
+    color: #ffffff;
+    color: #555f62;
+    margin-top: 31px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 7px 15px;*/
+    z-index: 999;
+}
+.view-all:hover {
+    background: #648aa8;
+    color:#ffffff;
+}
+.cat-active, .-filter.active {
+    background: #82a5c0;
+    color: #ffffff!important;
+    border-bottom: 1px solid #cddbe6;
+}
 .mc-filters a, .cat-item a {
     font-family: "Futura",sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     float: right;
-    margin-top: 38px!important;
-    padding: 0 24px 0 24px;
+    margin-top: 32px!important;
+    padding: 5px 24px 2px 24px;
     color: #555f62;
 }
+.mc-filters a:hover, .cat-item a:hover {
+    background: #648aa8;
+    color:#ffffff;
+}
+.genericon.genericon- {
+    font-family: "Futura",sans-serif!important;
+}
 .hover-title {
-
+    text-transform: uppercase;
  }
 /*------------------------------------*\
     IMAGES
@@ -1118,7 +1140,9 @@ p {
     .call-for {
         margin: 10px 0 ;
     }
-
+    .serv-repeater img {
+        width: 90%;
+    }
 
 }
 @media only screen and (max-width:500px) {
