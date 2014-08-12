@@ -8,7 +8,7 @@
     <div class="home-drop">
         <div class="drop-tab drop-light">
             <h1><?php echo get_field('drop_down_header'); ?></h1>
-            <a class="btn-home-drop" href="#"><?php echo get_field('drop_down_button'); ?></a>
+            <a class="btn-home-drop" href="<?php echo get_permalink(10)?>"><?php echo get_field('drop_down_button'); ?></a>
         </div>
         <div class="drop-content drop-light">
             <?php echo get_field('drop_down_content'); ?>

@@ -22,10 +22,12 @@
 
                     // display a sub field value
                     ?>
-                        <article>
+                        <article class="serv-repeater">
                              <h3><?php the_sub_field('section_title'); ?></h3>
                                 <span class="thick-line"></span><span class="thin-line"></span><br>
                              <?php the_sub_field('section_content'); ?>
+
+                             <img src="<?php echo the_sub_field('section_image'); ?>">
                         </article>
                 <?php
 

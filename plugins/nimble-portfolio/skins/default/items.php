@@ -21,14 +21,11 @@ foreach ($items as $item) {
         <div class="itembox" style='background: url("<?php echo $item->getThumbnail('large', true); ?>") no-repeat; background-size: cover;background-position: center center;'>
             <a href="<?php echo $item->getPermalink(); ?>" rel="<?//php echo apply_filters('nimble_portfolio_lightbox_galleryname', 'nimblebox[nimble_portfolio_gal_default]', $item); ?>" <?//php do_action('nimble_portfolio_lightbox_link_atts', $item); ?> title="<?php echo esc_attr($item->getTitle()); ?>">
                 <!-- <img class="itembox-img" src="<?//php echo $item->getThumbnail('large', true); ?>" />-->
-                <div class="-mask">
-
-                </div>
-                <div class="genericon genericon-">
+                <div class="portfolio-mask">
                     <span class="hover-title"><?php echo $item->getTitle(); ?></span><br>
-                    <?php echo get_field('location_city', $item->ID); ?>
-
+                    <span class="hover-city"><?php echo get_field('location_city', $item->ID); ?></span>
                 </div>
+
             </a>    
         </div>
         <?php if ($readmore_flag || $viewproject_flag) { ?> 

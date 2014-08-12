@@ -95,7 +95,7 @@ if (!class_exists('NimblePortfolio')) {
                             <?php echo apply_filters('nimble_portfolio_filter_all', sprintf('<a href="#" rel="*" class="-filter active">%s</a>', __("All"))); ?>
                             <?php require ($this->getTemplatePath("filters.php")); ?>
                         </div>
-                        <a class="view-all" href="<?php echo get_permalink(10); ?>">VIEW ALL</a>
+                        <a class="view-all" href="<?php echo get_permalink(10); ?>">ALL</a>
                             <?php } ?>
                     </div>
                 </div>

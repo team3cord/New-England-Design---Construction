@@ -84,4 +84,9 @@
 <script charset="utf-8" type="text/javascript">stLight.options({"publisher":"wp.38898937-6b31-4992-9175-7aa4df929169"});var st_type="wordpress3.9.1";</script>
 
 <?php get_template_part('sub', 'footer'); ?>
+<script>
+    jQuery(function($){
+        $('#menu-item-18').addClass('current-menu-item');
+    });
+</script>
 <?php get_footer(); ?>

@@ -7,7 +7,7 @@
 
         <div class="sidebar-widget">
             <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
-            <a class="view-all" href="<?php echo get_permalink(16); ?>">VIEW ALL</a>
+            <a class="view-all" href="<?php echo get_permalink(16); ?>">ALL</a>
         </div>
     </div>
     <div class="main-section">
@@ -81,6 +81,9 @@
 </main>
 
 <?php get_template_part('sub', 'footer'); ?>
-
-
+<script>
+    jQuery(function($){
+        $('#menu-item-18').addClass('current-menu-item');
+    });
+</script>
 <?php get_footer(); ?>

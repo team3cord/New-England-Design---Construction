@@ -65,4 +65,9 @@
 
 
 <?php get_template_part('sub', 'footer'); ?>
+<script>
+    jQuery(function($){
+        $('#menu-item-20').addClass('current-menu-item');
+    });
+</script>
 <?php get_footer(); ?>

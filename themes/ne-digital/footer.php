@@ -4,7 +4,7 @@
 				<!-- copyright -->
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>.
-                    All rights reserved. Website by Crosshatch Creative.
+                    All rights reserved. <a target="_blank" href="http://crosshatchcreative.com">Website by Crosshatch Creative</a>.
 
 				</p>
 				<!-- /copyright -->
@@ -30,7 +30,16 @@
              jQuery(function($){
                    $('nav li a').each(function(){
                        $(this).wrapInner('<span class="mc-link"></span> ');
-                   })
+                   });
+                   $('.sub-menu').wrap('<div class="sub-menu-div"></div>');
+                   $('.sub-menu-div').wrap('<div class="sub-wrapper"></div>');
+                   $(".menu-item-has-children, .sub-wrapper").mouseenter(function(){
+                       $('.sub-wrapper').show();
+                   }).mouseleave(function(){
+                       $('.sub-wrapper').hide();
+                   });
+
+
              });
         </script>
 

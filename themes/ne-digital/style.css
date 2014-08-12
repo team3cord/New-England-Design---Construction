@@ -51,7 +51,7 @@ img {
 	vertical-align:bottom;
 }
 a {
-	color:#444;
+    color: #f18c46;
 	text-decoration:none;
 }
 a:hover {
@@ -73,9 +73,7 @@ ul {
 
 }
 
-.orange-text a {
-   color: #f18c46;
-}
+
 .orange-text {
     color: #f18c46;
 }
@@ -119,6 +117,7 @@ nav li {
     width: 20%;
     height: 60%;
     margin-top: 27px;
+    padding-bottom: 25px;
     text-transform: uppercase;
 }
 nav li a {
@@ -126,6 +125,7 @@ nav li a {
     margin: 0 auto;
     text-align: center;
     padding: 5px 0 5px 0;
+    color: #555f62;
 }
 nav li a span:hover {
     border-bottom: 4px solid #555f62;
@@ -146,43 +146,81 @@ nav li a {
     font-family: "Futura","Trebuchet MS", Arial, sans-serif;
     font-size: 16px;
 }
-
+.menu-item-has-children {
+    position: relative;
+}
+.menu-item-has-children:hover + .sub-wrapper {
+    display: block;
+}
+.sub-menu {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+}
 .sub-menu li {
     display: block;
     float: left;
-    padding: 14px 5%;
     margin: 0;
     width: 100%;
-    height: 38px;
+    padding-bottom: 10px;
 }
 
-
-.sub-menu {
-    display: none;
-    margin-top: 50px;
-    position: relative;
+.sub-menu a {
+    padding: 11px 0 11px 20px;
+    text-align: left;
     width: 100%;
-    height: 120px;
-    padding: 0px;
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 1px;
+}
+.sub-menu a:hover {
+     background: rgba(163, 177, 192, .9);
+ }
+.sub-menu span {
+    display: block;
+    width: 100%;
+}
+.sub-menu a span:hover {
+    border-bottom: none;
+}
+ul.sub-menu  a span {
+    border-bottom: none!important;
 }
 
-.sub-menu:after
-{
-    content: '';
+.sub-wrapper {
+    display: none;
     position: absolute;
-    border-style: solid;
-    border-width: 0 12px 15px;
-    border-color: #FFFFFF transparent;
-    display: block;
+    top: 50px;
+    z-index: 9;
+    background: rgba(248, 249, 249, .7);
+    width: 100%;
+    padding-bottom: 10px;
+    border: 1px solid #7a8487;
+}
+
+.sub-menu-div {
+    position: relative;
+
+}
+.sub-menu-div:after, .sub-menu-div:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
     width: 0;
-    z-index: 1;
-    top: -15px;
-    left: 50px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.sub-menu-div:after {
+    border-color: rgba(248, 249, 249, 0);
+    border-bottom-color: #f8f9f9;
+    border-width: 17px;
+    margin-left: -17px;
+}
+.sub-menu-div:before {
+    border-color: rgba(122, 132, 135, 0);
+    border-bottom-color: #7a8487;
+    border-width: 19px;
+    margin-left: -19px;
 }
 
 /* social */
@@ -250,6 +288,9 @@ nav li a {
     margin: 9px 0 0 2.5%;
     color: #ffffff;
 }
+.copyright a {
+    color: #ffffff;
+}
 .hic {
     float: right;
     color: #ffffff;
@@ -268,6 +309,9 @@ nav li a {
     float: left;
     width: 50%;
 
+}
+.co-name, .call-for span {
+    font-weight: bold;
 }
 .co-info span{
     font-size: 13px;
@@ -366,6 +410,8 @@ nav li a {
     float: left;
     margin:0;
     padding: 0;
+    font-weight: normal;
+    letter-spacing: 0.2em;
     color: #ffffff;
 }
 .btn-home-drop {
@@ -449,6 +495,9 @@ nav li a {
     margin-top: 70px;
     background: #cccfd0;
 }
+.serv-repeater img {
+    margin-bottom: 30px;
+}
 .right-testimonial {
     float: left;
     padding: 25px 9.4% 25px 10.5%;
@@ -461,6 +510,7 @@ nav li a {
 .testimonial_rotator_quote {
     font-family: "Open Sans",sans-serif;
     font-size: 14px;
+    color: #4c6888;
 }
 .right-call-today {
     float: left;
@@ -474,8 +524,9 @@ nav li a {
 }
 .btn-contact {
     float: left;
-    font-family: "Futura", "Trebuchet MS", Arial, sans-serif;
+    font-family: "Futura Italic", "Trebuchet MS", Arial, sans-serif;
     font-size: 18px;
+    font-style: italic;
     color: #ffffff;
     background: #82a5c0;
     padding: 9px 35px;
@@ -563,8 +614,9 @@ nav li a {
     border-bottom: 1px solid #cddbe6;
     color: #ffffff;
 }
-.mc-contact-form input[type='submit']:hover {
+.mc-contact-form input[type='submit']:hover, .btn-contact:hover {
     background: #648aa8;
+    color: #ffffff;
 }
 .contact-how {
     float: left;
@@ -653,7 +705,6 @@ nav li a {
     font-size: 14px;
     float: right;
     margin: 0 15px 0 0;
-    padding: 37px 15px;
 }
 .blog-list-post {
     display: block;
@@ -693,6 +744,7 @@ nav li a {
 .read-more {
     font-size: 14px;
     text-decoration: underline;
+    font-style: italic;
 }
 .newer-posts {
     width: 50%;
@@ -744,6 +796,8 @@ nav li a {
 .project-content a {
     color: #f18c46;
     text-decoration: underline;
+    font-family: "Futura Italic", "Futura",sans-serif;
+    font-style: italic;
 }
 .-item {
     margin: 1%;
@@ -768,6 +822,48 @@ nav li a {
     max-width: 380px;
     min-height: 240px;
 }
+/*
+.portfolio-mask:hover {
+    diplay:block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    color: #ffffff;
+    font-size: 18px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5)!important;
+    z-index: 2;
+    text-align: center;
+    padding-top: 23%;
+}
+.hover-title {
+    width: 100%;
+    height:100%;
+    color: #ffffff;
+    font-size: 18px;
+    z-index: 2;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.xxxgenericon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: inherit;
+    font-weight: normal;
+    font-style: normal;
+    vertical-align: top;
+    color: #ffffff;
+    font-size: 18px;
+    z-index: 2;
+}*/
 .portfolio-mask {
     position: absolute;
     top: 0;
@@ -794,15 +890,17 @@ nav li a {
 .-filters.mc-filters a:first-of-type {
     display: none;
 }
-.mc-filters a {
-    font-size: 12px;
+.mc-filters a, .cat-item a {
+    font-family: "Futura",sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
     float: right;
     margin-top: 38px!important;
     padding: 0 24px 0 24px;
-}.hover-title {
-    display: inline-block;
-    text-transform: uppercase;
-    margin-bottom: 5px;
+    color: #555f62;
+}
+.hover-title {
+
  }
 /*------------------------------------*\
     IMAGES
@@ -829,6 +927,15 @@ nav li a {
 	src:url('fonts/futura-medium-webfont.eot?#iefix') format('embedded-opentype'),
 		url('fonts/futura-medium-webfont.woff') format('woff'),
 		url('fonts/futura-medium-webfont.ttf') format('truetype'),
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+	font-family:'Futura Italic';
+	src:url('fonts/futura-medium-italic.eot');
+	src:url('fonts/futura-medium-italic.eot?#iefix') format('embedded-opentype'),
+		url('fonts/futura-medium-italic.woff') format('woff'),
+		url('fonts/futura-medium-italic.ttf') format('truetype'),
     font-weight:normal;
     font-style:normal;
 }
@@ -1020,6 +1127,7 @@ p {
      }
     .blog-list-img, .blog-list-content {
         width: 99%;
+        padding-bottom: 25px;
     }
 }
 @media only screen and (max-width:401px) {
@@ -1052,6 +1160,9 @@ p {
         text-align: center;
         margin: 8px 0 8px 0;
         padding: 10px 0 10px 0;
+    }
+    .mc-contact-form input[type='text'], .mc-contact-form input[type='email'], .mc-contact-form input[type='tel']{
+        width: 350px;
     }
 
 }
