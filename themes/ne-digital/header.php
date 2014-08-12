@@ -42,6 +42,9 @@
 					<!-- nav -->
 					<nav class="nav" role="navigation">
                    <div class="mobile-logo">     <a class="main-logo" href="<?php echo home_url();?>"><img src="<?php echo get_template_directory_uri(); ?>/img/nedc-logo.png"></a></div>
+                        <div class="mobile-menu-drop">
+                            <a id="mcmobile-btn" href="#"><div class="mobile-center"><img src="<?php echo get_template_directory_uri(); ?>/img/menu-icon.png"><span>MENU</span></div> </a>
+                        </div>
 						<?php html5blank_nav(); ?>
 					</nav>
                     <div class="head-social">

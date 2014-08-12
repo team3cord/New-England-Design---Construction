@@ -38,6 +38,13 @@
                    }).mouseleave(function(){
                        $('.sub-wrapper').hide();
                    });
+                 $('.mobile-menu-drop a').on('click', function(e){
+                     e.preventDefault();
+                     $('.nav ul').slideToggle('slow', function(){
+                         // animation complete
+                         console.log('Animation Complete');
+                     })
+                 });
 
 
              });
