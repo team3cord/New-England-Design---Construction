@@ -385,8 +385,8 @@ ul.sub-menu  a span {
 .double-border{
     border-top: 1px solid #e5e5e6;
 }
-.lens-tool-kit.sd2-nav-default .sd-nav-deck .sd-nav-dot, .lens-tool-kit.sd2-dark .sd-nav-deck .sd-nav-dot {
-    background: url("img/nav-dots.png")no-repeat!important;
+.sd-nav-dot {
+    display: none!important;
 }
 .home-drop {
     z-index: 2;
@@ -394,12 +394,16 @@ ul.sub-menu  a span {
     position: absolute;
     top: 0;
     right: 0;
+    opacity: 0.8;
 }
 .drop-light {
-    background: rgba(192, 210, 223, 0.8);
+    background: #c0d2df;
+    /* background: rgba(192, 210, 223,0);*/
+
 }
 .drop-dark {
-    background: rgba(142, 174, 198, 0.9);
+    background: #8eaec6;
+    /*background: rgba(142, 174, 198,0);*/
 }
 .drop-tab {
     position: relative;
@@ -435,7 +439,7 @@ ul.sub-menu  a span {
     position: relative;
     display: none;
     float: left;
-    padding: 38px 3%;
+    padding: 38px 0;
 }
 .home-drop p {
     color: #ffffff;

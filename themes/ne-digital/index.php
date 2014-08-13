@@ -9,10 +9,11 @@
         <div class="drop-tab drop-light">
             <h1><?php echo get_field('drop_down_header'); ?></h1>
             <a class="btn-home-drop" href="<?php echo get_permalink(10)?>"><?php echo get_field('drop_down_button'); ?></a>
+            <div class="drop-content">
+                <?php echo get_field('drop_down_content'); ?>
+            </div>
         </div>
-        <div class="drop-content drop-light">
-            <?php echo get_field('drop_down_content'); ?>
-        </div>
+
         <div class="drop-action-div">
             <a class="drop-action down-button" href="#"></a>
         </div>
@@ -46,15 +47,13 @@
             if (dropButton.hasClass('down-button')){
                 dropContent.slideDown('slow', function(){
                     dropButton.addClass('up-button').removeClass('down-button');
-                    dropTab.addClass('drop-dark').removeClass('drop-light');
-                    dropContent.addClass('drop-dark').removeClass('drop-light');
+                    dropTab.addClass('drop-dark').removeClass('drop-light').fadeTo('fast', 0.9);
                 });
             }
             else if (dropButton.hasClass('up-button')){
                 dropContent.slideUp('slow', function(){
                     dropButton.addClass('down-button').removeClass('up-button');
-                    dropTab.addClass('drop-light').removeClass('drop-dark');
-                    dropContent.addClass('drop-light').removeClass('drop-dark');
+                    dropTab.addClass('drop-light').removeClass('drop-dark').fadeTo('fast', 0.8);
                 });
             }
         })
