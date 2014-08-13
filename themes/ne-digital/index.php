@@ -19,7 +19,7 @@
     </div>
     <aside class="home-sidebar">
         <div class="home-testimonial">
-            <h2><?php echo get_field('sidebar_header'); ?></h2>
+            <h3><?php echo get_field('sidebar_header'); ?></h3>
             <span class="thick-line"></span><span class="thin-line"></span>
             <div class="home-sidebar-content">
                 <?php echo do_shortcode("[testimonial_rotator id='40']"); ?>
@@ -27,7 +27,7 @@
         <a href="http://www.guildquality.com/NewEnglandDesignConstruction"><img src="<?php echo get_template_directory_uri(); ?>/img/guild-quality.png"></a>
         </div>
         <div class="left-call-today">
-            <h2><?php echo get_field('call_today_consultation'); ?></h2>
+            <h3><?php echo get_field('call_today_consultation'); ?></h3>
             <span class="thick-line"></span><span class="thin-line"></span></br>
             <a class="orange-phone" href="tel:<?php echo get_field('call_today_phone'); ?>"><?php echo get_field('call_today_phone'); ?></a>
         </div>
