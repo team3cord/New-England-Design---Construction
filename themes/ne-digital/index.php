@@ -47,13 +47,14 @@
             if (dropButton.hasClass('down-button')){
                 dropContent.slideDown('slow', function(){
                     dropButton.addClass('up-button').removeClass('down-button');
-                    dropTab.addClass('drop-dark').removeClass('drop-light').fadeTo('fast', 0.9);
+                    dropTab.addClass('drop-dark').removeClass('drop-light');
                 });
             }
             else if (dropButton.hasClass('up-button')){
                 dropContent.slideUp('slow', function(){
                     dropButton.addClass('down-button').removeClass('up-button');
-                    dropTab.addClass('drop-light').removeClass('drop-dark').fadeTo('fast', 0.8);
+                    dropTab.addClass('drop-light').removeClass('drop-dark');
+
                 });
             }
         })
