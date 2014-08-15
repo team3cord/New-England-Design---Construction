@@ -8,6 +8,7 @@ Author: digital-telepathy
 Author URI: http://www.dtelepathy.com/
 Contributors: dtelepathy, dtrenkner, burkett
 Tags: images, posts, feeds, pages, slidedeck
+MJC
 */
 
 .lens-tool-kit {
@@ -270,22 +271,22 @@ Tags: images, posts, feeds, pages, slidedeck
     margin: 0 0 0 10px;
     cursor: pointer;
     background: #bcbcbc;
-    -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);
+   /* -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);
     -moz-box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);
     -o-box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);
-    box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);
+    box-shadow: 0px 1px 0px rgba(255,255,255,.55), inset 0px 1px 0px rgba(0,0,0,.27);*/
     -webkit-border-radius: 11px;
     -moz-border-radius: 11px;
-    border-radius: 11px; 
+    border-radius: 11px;
 }
 .lens-tool-kit .sd-nav-deck .sd-nav-dot:first-child { margin-left: 0px; }
 .lens-tool-kit.sd2-nav-default .sd-nav-deck .sd-nav-dot,
 .lens-tool-kit.sd2-dark .sd-nav-deck .sd-nav-dot {
-    background: #000;
-    -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);
+    background: url("http://localhost/new-england-dc/wp-content/themes/ne-digital/img/nav-dots.png")no-repeat;
+  /*  -webkit-box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);
     -moz-box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);
     -o-box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);
-    box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);
+    box-shadow: 0px 1px 0px rgba(255,255,255,.24), inset 0px 1px 0px rgba(0,0,0,1);*/
 }
 .lens-tool-kit.sd2-dark .sd-nav-deck .sd-nav-dot:hover { background: #353535; }
 .lens-tool-kit.sd2-dark .sd-nav-deck .sd-nav-dot.active { background: #FFF; }

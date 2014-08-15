@@ -34,9 +34,9 @@
                    $('.sub-menu').wrap('<div class="sub-menu-div"></div>');
                    $('.sub-menu-div').wrap('<div class="sub-wrapper"></div>');
                    $(".menu-item-has-children, .sub-wrapper").mouseenter(function(){
-                       $('.sub-wrapper').show();
+                       $(this).find('.sub-wrapper').show();
                    }).mouseleave(function(){
-                       $('.sub-wrapper').hide();
+                       $(this).find('.sub-wrapper').hide();
                    });
                  $('.mobile-menu-drop a').on('click', function(e){
                      e.preventDefault();
@@ -45,6 +45,7 @@
                          console.log('Animation Complete');
                      })
                  });
+                 $()
 
 
              });
