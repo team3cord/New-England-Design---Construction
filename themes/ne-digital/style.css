@@ -188,6 +188,7 @@ ul.sub-menu  a span {
 .sub-wrapper {
     display: none;
     position: absolute;
+    min-width: 100%;
     top: 50px;
     z-index: 9;
     background: rgba(248, 249, 249, 1);

@@ -34,7 +34,17 @@
                    $('.sub-menu').wrap('<div class="sub-menu-div"></div>');
                    $('.sub-menu-div').wrap('<div class="sub-wrapper"></div>');
                    $(".menu-item-has-children, .sub-wrapper").mouseenter(function(){
-                       $(this).find('.sub-wrapper').show();
+                       var subMenu = $(this).find('.sub-wrapper');
+                       var parentWidth = $(this).width();
+                       var subMenuWidth = subMenu.width();
+                       var left = parseInt(((subMenuWidth - parentWidth)/ 2));
+                       subMenu.show();
+                       subMenu.css('left',('-' + left + 'px'));
+
+                       console.log(parentWidth);
+                       console.log(subMenuWidth);
+                       console.log(left);
+
                    }).mouseleave(function(){
                        $(this).find('.sub-wrapper').hide();
                    });
