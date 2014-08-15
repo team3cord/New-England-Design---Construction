@@ -300,6 +300,16 @@ function enable_threaded_comments()
         }
     }
 }
+// CUSTOM JQUERY SCRIPT IN ADMIN for featured image
+function load_my_alerts(){
+    wp_register_script(
+        'my_alerts',
+        get_template_directory_uri() . '/js/mc.js',
+        array( 'jquery' )
+    );
+    wp_enqueue_script( 'my_alerts' );
+}
+add_action('admin_enqueue_scripts', 'load_my_alerts');
 
 // Custom Comments Callback
 function html5blankcomments($comment, $args, $depth)

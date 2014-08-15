@@ -1226,7 +1226,7 @@ p {
     .mobile-center {
         display: block;
         height: 45px;
-        width: 25%;
+        width: 30%;
         margin: 0 auto;
     }
     .mobile-menu-drop img {
@@ -1241,10 +1241,11 @@ p {
 
         height: 85px;
         display: block;
-        float: left;
+        float: right;
         font-family: "Futura", sans-serif;
         font-size: 23px;
         padding-top: 2px;
+        padding-right: 5px;
         margin-left: 10px;
         color: #555f62;
     }
